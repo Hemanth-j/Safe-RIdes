@@ -1,0 +1,214 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Safe Rides</title>
+        <link rel="icon" type="image/x-icon" href="Safe.jpeg">
+        <style>
+            * {box-sizing: border-box;}
+ 
+     .header {
+  overflow: hidden;
+  background-color: #080808;
+  padding: 20px 10px;
+}
+
+img {
+  border-radius: 25px;
+}
+.header a {
+  float: left;
+  color: rgb(212, 209, 209);
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 20px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+pcenter {
+  float:center;
+  background-color: rgb(43, 41, 41);
+  
+  width: 70%;
+  font-size: 20px;
+  color: rgb(156, 173, 184);
+}
+
+pleft {
+  float: left;
+  padding: 20px;
+  color: rgb(156, 173, 184);
+  width: 45%;
+  font-size: 20px;
+  background-color: #2e2e30;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+pright {
+  float: right;
+  padding: 20px;
+  width: 45%;
+  font-size: 20px;
+  color: rgb(156, 173, 184);
+  background-color: #2e2e30;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+footer {
+        padding: 10px 20px;
+        background: #666;
+        color: white;
+      }
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .header-right {
+    float: none;
+  }
+}
+
+
+</style>
+    </head>
+    <body style="background-color:rgb(45, 47, 48);">
+        <div class="header">
+           
+            <img src="Safe.jpeg" style="width:190px;height:80px;">
+            <div class="header-right">
+              <a class="active" href="file:home.html">Home</a>
+              <a href="file:about.html">About</a>
+              <a href="file:products.html">Products</a>
+              <a href="file:contact.html">Contact</a>
+              
+            </div>
+          </div>
+          <div style="padding-left:20px">
+        <h1><center><font color="#d9d9d9">
+            About Safe Rides</font>
+        </center></h1>
+        <br>
+        <p> <font size="6" color="#33ccff">Who We Are</font></p>
+        <section>
+        <pcenter>
+          
+          <p>Safe Rides Pvt Ltd provides Technical support services and Mobility Solutions.Our Technical support services are all-inclusive and provide a wide range of computer services.We make sure that your hardware/Software and network functions perfectly and is in complete order.Though our Mobility Solutions we try to solve common social problems related to Automobiles and improve existing technology set-up.</p>
+          <p>Safe Rides is a new age IT Infrastructure management service delivering timely solutions/services enhancing operational excellence of your business. Our IT infrastructure service and solutions enable you to run your business with better integration,cutting on downtime and optimizing project cost.</p>
+        </pcenter>
+        <pleft>
+          <font size="6" color="#33ccff">Vision</font><br>
+          </p>Safe Rides is at the core of the clean energy revolution, developing highly innovative automobile solutions which increases the life style. We believe in efficiency and innovation.
+
+          
+        </pleft>
+        <pright>
+          <font size="6" color="#33ccff"> Mission</font><br>
+          </p>To become one of the top Automobile Solutions Company by 2027.
+
+To rank in the top 5 companies worldwide in Innovation of Electric Vehicle solutions by 2027.
+        </pright>
+
+      </section>
+        </div>  
+
+        <div class="pcenter">
+           
+          
+            <center><font size="6" color="#33ccff"> Need more details?<a href="contact.html" color="#ffffff"> Contact us</a></font></center>
+            
+        </div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+          <footer>
+            <center><p>Copyright ©. All Rights Reserved</p>
+           
+            </center></footer>
+         
+                   </div>
+         
+         
+         
+                   <script>
+                     let slideIndex = 0;
+                     showSlides();
+                     
+                     function showSlides() {
+                       let i;
+                       let slides = document.getElementsByClassName("mySlides");
+                       let dots = document.getElementsByClassName("dot");
+                       for (i = 0; i < slides.length; i++) {
+                         slides[i].style.display = "none";  
+                       }
+                       slideIndex++;
+                       if (slideIndex > slides.length) {slideIndex = 1}    
+                       for (i = 0; i < dots.length; i++) {
+                         dots[i].className = dots[i].className.replace(" active", "");
+                       }
+                       slides[slideIndex-1].style.display = "block";  
+                       dots[slideIndex-1].className += " active";
+                       setTimeout(showSlides, 1000); // Change image every 2 seconds
+                     }
+                     </script>
+             </body>
